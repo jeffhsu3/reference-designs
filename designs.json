@@ -1,0 +1,43 @@
+{
+  "designs": [
+    {
+      "name": "ihp-sg13g2",
+      "process": "ihp-sg13g2",
+      "path": "ihp-sg13g2/ihp-sg13g2.gds.gz",
+      "topcell": "ihp-sg13g2",
+      "tools": [
+        "gdscheck",
+        "gdsfill"
+      ],
+      "source": "",
+      "license": "CERN-OHL-W-2.0",
+      "notes": ""
+    },
+    {
+      "name": "ihp-sg13cmos5l",
+      "process": "ihp-sg13cmos5l",
+      "path": "ihp-sg13cmos5l/ihp-sg13cmos5l.gds.gz",
+      "topcell": "ihp-sg13cmos5l",
+      "tools": [
+        "gdscheck",
+        "gdsfill"
+      ],
+      "source": "",
+      "license": "CERN-OHL-W-2.0",
+      "notes": ""
+    },
+    {
+      "name": "gf180mcuD",
+      "process": "gf180mcuD",
+      "path": "gf180mcuD/gf180mcuD.gds.gz",
+      "topcell": "gf180mcuD",
+      "tools": [
+        "gdscheck",
+        "gdsfill"
+      ],
+      "source": "",
+      "license": "CERN-OHL-S-2.0",
+      "notes": "Expresso ASIC"
+    }
+  ]
+}
