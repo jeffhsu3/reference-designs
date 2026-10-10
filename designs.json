@@ -38,6 +38,18 @@
       "source": "",
       "license": "CERN-OHL-S-2.0",
       "notes": "Expresso ASIC"
+    },
+    {
+      "name": "asap7-sha256",
+      "process": "asap7",
+      "path": "asap7/sha256.gds.gz",
+      "topcell": "sha256",
+      "tools": [
+        "gdscheck"
+      ],
+      "source": "https://github.com/jeffhsu3/asap7_reference_design/tree/open-flow",
+      "license": "",
+      "notes": "Open-source SiliconCompiler/OpenROAD P&R with stock LambdaPDK ASAP7 and M6/M7 power ring; not the Innovus reference layout. Forked from Centre-for-Hardware-Security/asap7_reference_design. License not specified upstream."
     }
   ]
 }
