@@ -50,6 +50,18 @@
       "source": "https://github.com/jeffhsu3/asap7_reference_design/tree/open-flow",
       "license": "",
       "notes": "Open-source SiliconCompiler/OpenROAD P&R; not the Innovus reference layout. LambdaPDK ASAP7 with its tech LEF from https://github.com/jeffhsu3/lambdapdk/tree/asap7-m1-eolkeepout (be6ee59: quarter-nanometre rule values made whole so OpenROAD keeps the M1 and M4-M7 EOL keep-outs), an on-grid M6/M7 power ring, M2-M5 PDN stacks on the M4 tracks and V6 cut pitch 0.077 um. Rebuild with open_flow/run_sha256.py --lambdapdk <checkout of that branch> (open-flow 3310ac0). Forked from Centre-for-Hardware-Security/asap7_reference_design. License not specified upstream."
+    },
+    {
+      "name": "asap7-aes",
+      "process": "asap7",
+      "path": "asap7/aes.gds.gz",
+      "topcell": "aes_cipher_top",
+      "tools": [
+        "gdscheck"
+      ],
+      "source": "https://github.com/jeffhsu3/OpenROAD-flow-scripts/tree/asap7-syn-def-units",
+      "license": "BSD-3-Clause",
+      "notes": "OpenCores aes_core (ASICs World Services, BSD-3-Clause; flow/designs/src/aes/LICENSE) placed and routed by ORFS's own asap7 platform and PDN, a different flow from asap7-sha256. Built from asap7-syn-def-units (4b053d26): the asap7 tech LEF rounding fix (ed354a6a) plus a synth_syn.tcl fix that gives the block the tech's DEF units, without which the DEF and the GDS built from it are rounded to a 10 nm grid. Detail routing converges to zero violations; timing misses 380 ps by 1.69 ps. Rebuild with: make DESIGN_CONFIG=./designs/asap7/aes/config.mk in flow/ (OpenROAD 26Q3, Yosys 0.69, KLayout 0.30.2)."
     }
   ]
 }
