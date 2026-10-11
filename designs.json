@@ -62,6 +62,26 @@
       "source": "https://github.com/jeffhsu3/OpenROAD-flow-scripts/tree/asap7-syn-def-units",
       "license": "BSD-3-Clause",
       "notes": "OpenCores aes_core (ASICs World Services, BSD-3-Clause; flow/designs/src/aes/LICENSE) placed and routed by ORFS's own asap7 platform and PDN, a different flow from asap7-sha256. Built from asap7-syn-def-units (4b053d26): the asap7 tech LEF rounding fix (ed354a6a) plus a synth_syn.tcl fix that gives the block the tech's DEF units, without which the DEF and the GDS built from it are rounded to a 10 nm grid. Detail routing converges to zero violations; timing misses 380 ps by 1.69 ps. Rebuild with: make DESIGN_CONFIG=./designs/asap7/aes/config.mk in flow/ (OpenROAD 26Q3, Yosys 0.69, KLayout 0.30.2)."
+    },
+    {
+      "name": "gt2n-aes",
+      "process": "gt2n",
+      "path": "gt2n/aes.gds.gz",
+      "topcell": "aes_cipher_top",
+      "tools": [],
+      "source": "https://github.com/jeffhsu3/OpenROAD-flow-scripts/tree/asap7-syn-def-units",
+      "license": "BSD-3-Clause",
+      "notes": "OpenCores aes_core (ASICs World Services, BSD-3-Clause) placed and routed by ORFS's gt2n platform (GT2N PDK, BSD-3-Clause, azadnaeemi/GT2N 308b221) from asap7-syn-def-units (4b053d26), whose gt2n platform and designs are unchanged from the fork's master; Yosys synthesis, so the DEF-units fix does not apply. tools is empty because mainline gdscheck has no gt2n PDK; the gt2n branch of jeffhsu3/gdscheck (a069623) supports it. Its gt2n main suite reports 9,547 markers: ACT.2 9,480 and V0.M1.1 67. Every ACT.2 marker is on a vertical edge where a single-pitch gt2_6t_filler (42 nm ACT) abuts a logic cell. Detail routing converges to zero violations; timing misses 350 ps by 31.8 ps. Rebuild with: make DESIGN_CONFIG=./designs/gt2n/aes/config.mk in flow/ (OpenROAD 26Q3, Yosys 0.69, KLayout 0.30.2)."
+    },
+    {
+      "name": "gt2n-jpeg",
+      "process": "gt2n",
+      "path": "gt2n/jpeg.gds.gz",
+      "topcell": "jpeg_encoder",
+      "tools": [],
+      "source": "https://github.com/jeffhsu3/OpenROAD-flow-scripts/tree/asap7-syn-def-units",
+      "license": "BSD-3-Clause",
+      "notes": "OpenCores video_systems JPEG encoder (ASICs World Services, BSD-3-Clause) placed and routed by ORFS's gt2n platform (GT2N PDK, BSD-3-Clause, azadnaeemi/GT2N 308b221) from asap7-syn-def-units (4b053d26), whose gt2n platform and designs are unchanged from the fork's master; Yosys synthesis, so the DEF-units fix does not apply. tools is empty because mainline gdscheck has no gt2n PDK; the gt2n branch of jeffhsu3/gdscheck (a069623) supports it. Its gt2n main suite reports 24,496 markers, all ACT.2. Every ACT.2 marker is on a vertical edge where a single-pitch gt2_6t_filler (42 nm ACT) abuts a logic cell. Detail routing converges to zero violations; timing misses 400 ps by 8.7 ps. Rebuild with: make DESIGN_CONFIG=./designs/gt2n/jpeg/config.mk in flow/ (OpenROAD 26Q3, Yosys 0.69, KLayout 0.30.2)."
     }
   ]
 }
