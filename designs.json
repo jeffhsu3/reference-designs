@@ -48,8 +48,8 @@
         "gdscheck"
       ],
       "source": "https://github.com/jeffhsu3/asap7_reference_design/tree/open-flow",
-      "license": "",
-      "notes": "Open-source SiliconCompiler/OpenROAD P&R; not the Innovus reference layout. LambdaPDK ASAP7 with its tech LEF from https://github.com/jeffhsu3/lambdapdk/tree/asap7-m1-eolkeepout (be6ee59: quarter-nanometre rule values made whole so OpenROAD keeps the M1 and M4-M7 EOL keep-outs), an on-grid M6/M7 power ring, M2-M5 PDN stacks on the M4 tracks and V6 cut pitch 0.077 um. Rebuild with open_flow/run_sha256.py --lambdapdk <checkout of that branch> (open-flow 3310ac0). Forked from Centre-for-Hardware-Security/asap7_reference_design. License not specified upstream."
+      "license": "BSD-2-Clause",
+      "notes": "Open-source SiliconCompiler/OpenROAD P&R; not the Innovus reference layout. LambdaPDK ASAP7 with its tech LEF from https://github.com/jeffhsu3/lambdapdk/tree/asap7-m1-eolkeepout (be6ee59: quarter-nanometre rule values made whole so OpenROAD keeps the M1 and M4-M7 EOL keep-outs), an on-grid M6/M7 power ring, M2-M5 PDN stacks on the M4 tracks and V6 cut pitch 0.077 um. Rebuild with open_flow/run_sha256.py --lambdapdk <checkout of that branch> (open-flow 3310ac0). RTL is the secworks SHA-256 core (Joachim Strombergson, Copyright (c) 2013 Secworks Sweden AB, BSD-2-Clause). Forked from Centre-for-Hardware-Security/asap7_reference_design, whose flow scripts and constraints have no license upstream; none of that material is in the GDS."
     },
     {
       "name": "asap7-aes",
