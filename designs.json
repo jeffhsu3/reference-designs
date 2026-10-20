@@ -69,9 +69,9 @@
       "path": "gt2n/aes.gds.gz",
       "topcell": "aes_cipher_top",
       "tools": [],
-      "source": "https://github.com/jeffhsu3/OpenROAD-flow-scripts/tree/asap7-syn-def-units",
+      "source": "https://github.com/jeffhsu3/OpenROAD-flow-scripts/tree/gt2n-fill-sheet",
       "license": "BSD-3-Clause",
-      "notes": "OpenCores aes_core (ASICs World Services, BSD-3-Clause) placed and routed by ORFS's gt2n platform (GT2N PDK, BSD-3-Clause, azadnaeemi/GT2N 308b221) from asap7-syn-def-units (4b053d26), whose gt2n platform and designs are unchanged from the fork's master; Yosys synthesis, so the DEF-units fix does not apply. tools is empty because mainline gdscheck has no gt2n PDK; the gt2n branch of jeffhsu3/gdscheck (a069623) supports it. Its gt2n main suite reports 9,547 markers: ACT.2 9,480 and V0.M1.1 67. Every ACT.2 marker is on a vertical edge where a single-pitch gt2_6t_filler (42 nm ACT) abuts a logic cell. Detail routing converges to zero violations; timing misses 350 ps by 31.8 ps. Rebuild with: make DESIGN_CONFIG=./designs/gt2n/aes/config.mk in flow/ (OpenROAD 26Q3, Yosys 0.69, KLayout 0.30.2)."
+      "notes": "OpenCores aes_core (ASICs World Services, BSD-3-Clause) placed and routed by ORFS on GT2N (BSD-3-Clause). Replaces the original AES layout with FLOW_VARIANT=sgdecap2 from the local gt2n-fill-sheet checkout at 6702a7f7a8299470b3a03a0686834cfb83db8323. Includes W13 one-pitch fillers and backside taps for mixed W13/W31 rows (49a3f710), mux2_x1 V0/M1 enclosure fixes (c4d2bb07), mux2_x1 and W13 decap VG/ACT fixes (cc346698), and the 126 nm staggered split-gate W31 decap (6702a7f7). GT2N main suite at gdscheck 1a0595a33ffce7731efbf53253f96d126d41a1d6 passes with zero markers at both 7 um and 20 um tiles, including manufacturing-grid and technology-file checks, with connectivity enabled. Use --tile 7 for this design: 25-26 s versus about 283 s at 20 um on the validation host with 8 threads. tools remains empty pending GT2N support in the default consumer release. Rebuild from that ORFS revision in flow/: make DESIGN_CONFIG=./designs/gt2n/aes/config.mk FLOW_VARIANT=sgdecap2 (OpenROAD 26Q3, Yosys 0.69, KLayout 0.30.2). Setup slack is -31.793 ps against 350 ps; hold slack is -10.0358 ps. See gt2n/aes.provenance.json for hashes and validation records, and gt2n/aes.LICENSE for notices."
     },
     {
       "name": "gt2n-jpeg",
